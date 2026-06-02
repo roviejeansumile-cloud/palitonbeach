@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paliton Beach — Siquijor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <canvas id="starfield"></canvas>
+
+    <div id="loader">
+        <div class="loader-text">PALITON BEACH</div>
+        <div class="loader-bar"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header id="header">
+        <a href="#home" class="logo">
+            <div class="logo-icon">✦</div>
+            Paliton Beach
+        </a>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-vignette"></div>
+        <div class="hero-content">
+            <div class="hero-eyebrow">Siquijor Island, Philippines</div>
+            <h1 class="hero-title">
+                PALITON
+                <em>Beach</em>
+            </h1>
+            <p class="hero-sub">Where the sea meets silence — Little Boracay of Siquijor</p>
+            <a href="#gallery" class="hero-cta">
+                Discover the Beauty <span class="arrow">→</span>
+            </a>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section" id="gallery">
+        <div class="gallery-header reveal">
+            <div class="section-label">Gallery</div>
+            <h2 class="section-title">Beauty of Paliton</h2>
+            <p class="section-sub">Enjoy your vacation at Paliton Beach</p>
+        </div>
+        <div class="coverflow-wrapper">
+            <div class="coverflow-track" id="cfTrack">
+                <div class="cf-item" data-index="0">
+                    <img src="pic.jpg" alt="Picture Taking">
+                    <div class="cf-overlay">
+                        <div class="cf-title">Picture Taking</div>
+                        <div class="cf-desc">Capturing authentic emotions and personalities</div>
+                    </div>
+                </div>
+                <div class="cf-item" data-index="1">
+                    <img src="sunset.jpg" alt="Beautiful Sunset">
+                    <div class="cf-overlay">
+                        <div class="cf-title">Beautiful Sunset</div>
+                        <div class="cf-desc">Beauty and peacefulness of the day's end</div>
+                    </div>
+                </div>
+                <div class="cf-item" data-index="2">
+                    <img src="siquijor.jpg" alt="Sandcastles">
+                    <div class="cf-overlay">
+                        <div class="cf-title">Sandcastles</div>
+                        <div class="cf-desc">Simple grains of sand turned into amazing art</div>
+                    </div>
+                </div>
+                <div class="cf-item" data-index="3">
+                    <img src="bitay.jpg" alt="Colorful Sky">
+                    <div class="cf-overlay">
+                        <div class="cf-title">Colorful Sky</div>
+                        <div class="cf-desc">Witness the sky as the sun sets over the ocean</div>
+                    </div>
+                </div>
+                <div class="cf-item" data-index="4">
+                    <img src="balas.jpg" alt="White Sand">
+                    <div class="cf-overlay">
+                        <div class="cf-title">White Sand</div>
+                        <div class="cf-desc">Perfect for sunbathing and relaxation</div>
+                    </div>
+                </div>
+                <div class="cf-item" data-index="5">
+                    <img src="latay.jpg" alt="Calm and Quiet">
+                    <div class="cf-overlay">
+                        <div class="cf-title">Calm & Quiet Place</div>
+                        <div class="cf-desc">Relax and enjoy nature at its finest</div>
+                    </div>
+                </div>
+                <div class="cf-item" data-index="6">
+                    <img src="3.jpg" alt="Turquoise Water">
+                    <div class="cf-overlay">
+                        <div class="cf-title">Clear Turquoise Water</div>
+                        <div class="cf-desc">Perfect for swimming and snorkeling</div>
+                    </div>
+                </div>
+                <div class="cf-item" data-index="7">
+                    <img src="1.jpg" alt="Special Moments">
+                    <div class="cf-overlay">
+                        <div class="cf-title">Special Moments</div>
+                        <div class="cf-desc">Memories that last a lifetime</div>
+                    </div>
+                </div>
+                <div class="cf-item" data-index="8">
+                    <img src="lubi1.jpg" alt="Visit Now">
+                    <div class="cf-overlay">
+                        <div class="cf-title">Visit Now & Enjoy</div>
+                        <div class="cf-desc">Come and experience paradise</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cf-controls">
+            <button class="cf-btn" id="cfPrev">‹</button>
+            <div class="cf-dots" id="cfDots"></div>
+            <button class="cf-btn" id="cfNext">›</button>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="about-section">
+            <div class="about-img-wrap reveal">
+                <img src="1.jpg" alt="Paliton Beach">
+                <div class="about-img-frame"></div>
+                <div class="about-tag">
+                    <div class="about-tag-num">2026</div>
+                    <div class="about-tag-label">Est. Destination</div>
+                </div>
+            </div>
+            <div class="about-content reveal">
+                <div class="section-label">About</div>
+                <h2 class="section-title">The Little Boracay<br>of Siquijor</h2>
+                <div class="about-body">
+                    <p>Paliton Beach is one of the most beautiful and popular tourist destinations in Siquijor. Known for its fine white sand, clear turquoise waters, and tall coconut trees that create a relaxing tropical atmosphere.</p>
+                    <p>Located in the municipality of San Juan, it offers a calm and quiet place where visitors can relax and enjoy nature — unlike crowded beaches.</p>
+                    <p>One of the main attractions is its breathtaking sunset view. Many tourists visit in the afternoon to witness the colorful sky as the sun sets over the ocean.</p>
+                </div>
+                <div class="stats-row">
+                    <div class="stat-cell">
+                        <div class="stat-num">₱20</div>
+                        <div class="stat-lbl">Entrance Fee</div>
+                    </div>
+                    <div class="stat-cell">
+                        <div class="stat-num">₱10</div>
+                        <div class="stat-lbl">Parking Fee</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACTIVITIES -->
+    <section class="activities-section" id="activities">
+        <div class="activities-header reveal">
+            <div class="section-label">Experiences</div>
+            <h2 class="section-title">Activities at Paliton</h2>
+            <p class="section-sub">Discover the best experiences Paliton Beach has to offer</p>
+        </div>
+        <div class="activities-grid" id="activitiesGrid"></div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal-bg" id="modalBg">
+        <div class="modal-box">
+            <div class="modal-img" style="position:relative">
+                <img id="mImg" src="" alt="">
+                <div class="modal-img-overlay"></div>
+                <button class="modal-x" id="mClose">&#x2715;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-cat" id="mCat"></div>
+                <h3 class="modal-ttl" id="mTitle"></h3>
+                <div class="modal-line"></div>
+                <p class="modal-txt" id="mDesc"></p>
+                <div class="modal-pills" id="mPills"></div>
+                <button class="modal-close" id="mCloseBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="contact-header reveal">
+            <div class="section-label" style="justify-content:center">Contact</div>
+            <h2 class="section-title">Come & Enjoy</h2>
+            <p class="section-sub">Let's create beautiful memories at Paliton Beach</p>
+        </div>
+        <div class="contact-grid reveal">
+            <a href="mailto:palitonbeach@email.com" class="contact-cell">
+                <div class="contact-ico">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/></svg>
+                </div>
+                <div class="contact-lbl">Email</div>
+                <div class="contact-val">palitonbeach@email.com</div>
+            </a>
+            <a href="tel:+1234567890" class="contact-cell">
+                <div class="contact-ico">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/></svg>
+                </div>
+                <div class="contact-lbl">Phone</div>
+                <div class="contact-val">+1 (234) 567-890</div>
+            </a>
+            <a href="https://www.google.com/maps/place/Paliton+Beach" target="_blank" rel="noopener" class="contact-cell">
+                <div class="contact-ico">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9S10.62 6.5 12 6.5S14.5 7.62 14.5 9S13.38 11.5 12 11.5Z"/></svg>
+                </div>
+                <div class="contact-lbl">Location</div>
+                <div class="contact-val">Paliton, San Juan, Siquijor</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#home" class="footer-logo">✦ Paliton Beach</a>
+        <p class="footer-copy">© 2026 jino ligutom</p>
+        <div class="footer-socials">
+            <a href="https://instagram.com" class="footer-social" aria-label="Instagram">
+                <svg viewBox="0 0 24 24"><path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 19.4 19.4 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2M7.6 4C5.61 4 4 5.61 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C18.39 20 20 18.39 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6M17.25 5.5C17.94 5.5 18.5 6.06 18.5 6.75S17.94 8 17.25 8S16 7.44 16 6.75S16.56 5.5 17.25 5.5M12 7C14.76 7 17 9.24 17 12S14.76 17 12 17S7 14.76 7 12S9.24 7 12 7M12 9C10.34 9 9 10.34 9 12S10.34 15 12 15S15 13.66 15 12S13.66 9 12 9Z"/></svg>
+            </a>
+            <a href="https://facebook.com" class="footer-social" aria-label="Facebook">
+                <svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C18.34 21.21 22 17.06 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+    // ─── CURSOR ───
+    const cur = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+        cur.style.left = mx + 'px';
+        cur.style.top = my + 'px';
+    });
+    function animRing() {
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        ring.style.left = rx + 'px';
+        ring.style.top = ry + 'px';
+        requestAnimationFrame(animRing);
+    }
+    animRing();
+    document.querySelectorAll('a, button, .act-card, .cf-item').forEach(el => {
+        el.addEventListener('mouseenter', () => { cur.style.transform = 'translate(-50%,-50%) scale(2.5)'; });
+        el.addEventListener('mouseleave', () => { cur.style.transform = 'translate(-50%,-50%) scale(1)'; });
+    });
+
+    // ─── SPARKLES (light-theme: teal dots instead of gold) ───
+    const canvas = document.getElementById('starfield');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+    function initStars() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        stars = Array.from({ length: 80 }, () => ({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            r: Math.random() * 1.5 + 0.3,
+            o: Math.random() * 0.4 + 0.05,
+            s: Math.random() * 0.003 + 0.001
+        }));
+    }
+    function drawStars() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        stars.forEach(s => {
+            s.o += s.s;
+            if (s.o > 0.45 || s.o < 0.05) s.s = -s.s;
+            ctx.beginPath();
+            ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(26,122,138,${s.o})`;
+            ctx.fill();
+        });
+        requestAnimationFrame(drawStars);
+    }
+    initStars();
+    drawStars();
+    window.addEventListener('resize', initStars);
+
+    // ─── LOADER ───
+    window.addEventListener('load', () => {
+        setTimeout(() => document.getElementById('loader').classList.add('hide'), 900);
+    });
+
+    // ─── HEADER SCROLL ───
+    window.addEventListener('scroll', () => {
+        document.getElementById('header').classList.toggle('scrolled', scrollY > 60);
+    });
+
+    // ─── HAMBURGER ───
+    document.getElementById('hamburger').addEventListener('click', () => {
+        document.getElementById('navMenu').classList.toggle('open');
+    });
+
+    // ─── REVEAL ON SCROLL ───
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // ─── COVERFLOW ───
+    const items = document.querySelectorAll('.cf-item');
+    const track = document.getElementById('cfTrack');
+    const dotsWrap = document.getElementById('cfDots');
+    let current = 0;
+
+    items.forEach((_, i) => {
+        const d = document.createElement('div');
+        d.className = 'cf-dot' + (i === 0 ? ' active' : '');
+        d.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(d);
+    });
+
+    function goTo(idx) {
+        items[current].classList.remove('active');
+        dotsWrap.children[current].classList.remove('active');
+        current = (idx + items.length) % items.length;
+        items[current].classList.add('active');
+        dotsWrap.children[current].classList.add('active');
+        const itemW = items[0].offsetWidth + 32;
+        const offset = (window.innerWidth / 2) - (current * itemW) - itemW / 2;
+        track.style.transform = `translateX(${offset}px)`;
+    }
+    goTo(0);
+    document.getElementById('cfPrev').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('cfNext').addEventListener('click', () => goTo(current + 1));
+    items.forEach((item, i) => item.addEventListener('click', () => goTo(i)));
+    let autoplay = setInterval(() => goTo(current + 1), 4000);
+    track.addEventListener('mouseenter', () => clearInterval(autoplay));
+    track.addEventListener('mouseleave', () => { autoplay = setInterval(() => goTo(current + 1), 4000); });
+    window.addEventListener('resize', () => goTo(current));
+
+    // ─── ACTIVITIES ───
+    const activities = [
+        {
+            img: "taking1.jfif", tag: "Photography", title: "Picture Taking",
+            description: "Strike a pose against Paliton Beach's pristine white sands and swaying coconut palms. Whether you're doing solo portraits, couple shots, or family photos, the natural beauty of the beach creates the perfect backdrop for memorable keepsakes. The golden hour light in the late afternoon is especially magical for photography.",
+            details: [{ icon: "🕐", label: "Best time: 4:00 PM – 6:00 PM" }, { icon: "📍", label: "Whole beach area" }, { icon: "💰", label: "Free activity" }]
+        },
+        {
+            img: "hulagway.jfif", tag: "Nature", title: "Sunset Watching",
+            description: "One of Paliton Beach's most beloved attractions is its breathtaking sunset view. As the sun dips below the horizon, the sky transforms into a canvas of warm oranges, pinks, and purples. Locals and tourists alike gather along the shoreline each evening to witness this daily spectacle.",
+            details: [{ icon: "🕐", label: "Best time: 5:30 PM – 7:00 PM" }, { icon: "📍", label: "Western shoreline" }, { icon: "🌅", label: "Daily occurrence" }]
+        },
+        {
+            img: "casle3.jfif", tag: "Beach Fun", title: "Sandcastle Building",
+            description: "Let your creativity run wild on Paliton's fine, compact white sand — perfect for building elaborate sandcastles and sculptures. Families and groups enjoy spending hours crafting detailed forts, mermaids, and towers by the water's edge.",
+            details: [{ icon: "🕐", label: "Best time: 7:00 AM – 10:00 AM" }, { icon: "📍", label: "Along the shoreline" }, { icon: "👨‍👩‍👧", label: "Family friendly" }]
+        },
+        {
+            img: "bitay.jpg", tag: "Nature", title: "Sky Gazing",
+            description: "Away from city lights, Paliton Beach offers an incredible sky-gazing experience. During the day, watch dramatic cloud formations roll over the ocean. At night, the dark skies reveal a brilliant canopy of stars.",
+            details: [{ icon: "🕐", label: "Best at dusk & night" }, { icon: "📍", label: "Open beach area" }, { icon: "✨", label: "Low light pollution" }]
+        },
+        {
+            img: "higda.jfif", tag: "Relax", title: "Sunbathing",
+            description: "Paliton Beach's powdery white sand is perfect for spreading out a towel and soaking up the warm Philippine sun. The gentle sea breeze keeps things comfortable even on hot days.",
+            details: [{ icon: "🕐", label: "Best time: 7:00 AM – 11:00 AM" }, { icon: "📍", label: "Main beach area" }, { icon: "🌴", label: "Shaded areas available" }]
+        },
+        {
+            img: "latay.jpg", tag: "Wellness", title: "Nature Walk",
+            description: "Take a peaceful stroll along the shoreline, listen to the sound of waves, and breathe in the fresh sea air. The rows of tall coconut trees provide natural shade and a calming atmosphere that makes stress simply melt away.",
+            details: [{ icon: "🕐", label: "Best time: Early morning" }, { icon: "📍", label: "Full beach perimeter" }, { icon: "🧘", label: "Peaceful & quiet" }]
+        },
+        {
+            img: "salom.jpg", tag: "Water Sports", title: "Swimming",
+            description: "Dive into Paliton Beach's crystal-clear turquoise waters, renowned for their calm and inviting conditions. The gentle waves and gradual depth make it suitable for swimmers of all ages and skill levels.",
+            details: [{ icon: "🕐", label: "Best time: 8:00 AM – 5:00 PM" }, { icon: "📍", label: "Main swimming area" }, { icon: "🐠", label: "Snorkeling friendly" }]
+        },
+        {
+            img: "lubi1.jpg", tag: "View", title: "Coconut Tree Lounging",
+            description: "Paliton Beach is lined with tall, graceful coconut trees that lean over the shoreline, creating a picture-perfect tropical escape. Hang a hammock between two palms, sip fresh buko juice, and spend the afternoon gently swaying to the rhythm of the sea breeze.",
+            details: [{ icon: "🕐", label: "Anytime during the day" }, { icon: "📍", label: "Tree-lined beach edge" }, { icon: "🥥", label: "Fresh coconuts nearby" }]
+        }
+    ];
+
+    const grid = document.getElementById('activitiesGrid');
+    activities.forEach((act, i) => {
+        const card = document.createElement('div');
+        card.className = 'act-card';
+        card.innerHTML = `
+            <img src="${act.img}" alt="${act.title}" loading="lazy">
+            <div class="act-overlay">
+                <div class="act-num">0${i + 1}</div>
+                <div class="act-name">${act.title}</div>
+                <span class="act-tag">${act.tag}</span>
+                <div class="act-hover-content"><p>${act.description.substring(0, 120)}…</p></div>
+            </div>
+            <div class="act-arrow">→</div>
+        `;
+        card.addEventListener('click', () => openModal(i));
+        grid.appendChild(card);
+    });
+
+    function openModal(i) {
+        const a = activities[i];
+        document.getElementById('mImg').src = a.img;
+        document.getElementById('mImg').alt = a.title;
+        document.getElementById('mCat').textContent = a.tag.toUpperCase();
+        document.getElementById('mTitle').textContent = a.title;
+        document.getElementById('mDesc').textContent = a.description;
+        document.getElementById('mPills').innerHTML = a.details.map(d =>
+            `<div class="modal-pill"><span class="icon">${d.icon}</span>${d.label}</div>`
+        ).join('');
+        document.getElementById('modalBg').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('modalBg').classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('mClose').addEventListener('click', closeModal);
+    document.getElementById('mCloseBtn').addEventListener('click', closeModal);
+    document.getElementById('modalBg').addEventListener('click', e => {
+        if (e.target === document.getElementById('modalBg')) closeModal();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    </script>
+</body>
+</html>
